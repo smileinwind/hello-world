@@ -19,3 +19,15 @@ https://www.cnblogs.com/yanzige/p/9810333.html
 git config --global i18n.commitencoding utf-8  --注释：该命令表示提交命令的时候使用utf-8编码集提交
 git config --global i18n.logoutputencoding utf-8 --注释：该命令表示日志输出时使用utf-8编码集显示
 export LESSCHARSET=utf-8  --注释：设置LESS字符集为utf-8
+git gui 文件乱码
+修改编码集
+点击 Edit --->Options...
+找到 Default  file content encoding  ， 点击 Change
+Git pull
+push前先将远程repository修改pull下来
+git pull origin master
+git push -u origin master
+若不想merge远程和本地修改，可以先创建新的分支：
+git branch [name]
+然后push
+$ git push -u origin [name]
