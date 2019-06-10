@@ -10,3 +10,12 @@ git rm README.txt
 git add README
 通过push操作把本地分支推送到远程
 git push origin master
+git 中文支持
+https://www.cnblogs.com/yanzige/p/9810333.html
+1、运行Git Bash窗口，在该窗口导航条（即最上面）右键，选择Options−>Text，找到下面两处
+　　Locale:选择 zh_CN 
+　　Charector set:选择 UTF-8 
+2、到Git Bash命令窗口输入如下设置命令语句
+git config --global i18n.commitencoding utf-8  --注释：该命令表示提交命令的时候使用utf-8编码集提交
+git config --global i18n.logoutputencoding utf-8 --注释：该命令表示日志输出时使用utf-8编码集显示
+export LESSCHARSET=utf-8  --注释：设置LESS字符集为utf-8
