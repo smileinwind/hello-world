@@ -1,3 +1,5 @@
+把一个已有的本地仓库与之关联
+git remote add origin git@github.com:michaelliao/learngit.git
 把文件添加到仓库：
 git add readme.txt
 HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
