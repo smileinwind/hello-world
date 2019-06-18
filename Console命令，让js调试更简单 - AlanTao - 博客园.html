@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="origin" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>Console命令，让js调试更简单 - AlanTao - 博客园</title>
+    <title><a href="https://www.cnblogs.com/alantao/p/5859358.html">from</a></title>
+    <meta property="og:description" content="一、显示信息的命令 二、点位符：字符(%s)、整数(%d或%i)、浮点数(%f)和对象(%o); 三、信息分组 (console.group(),console.groupEnd()) 四、将对象以树" />
+    <link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=KOZafwuaDasEedEenI5aTy8aXH0epbm6VUJ0v3vsT_Q1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/CodingLife/bundle-CodingLife.css?v=B2ahlykUFl7DLZ045D6cN7qHiurXaL46n9Vl4QS4-aw1"/>
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/CodingLife/bundle-CodingLife-mobile.css?v=nSeK_P8BAqpQ4UDLpcwd6yl-jVYCXnR833BwkQ30uqQ1"/>
+    <link title="RSS" type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/alantao/rss"/>
+    <link title="RSD" type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/alantao/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/alantao/wlwmanifest.xml"/>
+    <script src="//common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script>var currentBlogId=232583;var currentBlogApp='alantao',cb_enable_mathjax=false;var isLogined=false;</script>
+    <script src="/bundles/blog-common.js?v=smtcUT5dhdu_5eEO8CKHYoVc7DPLgEBGzp6zKkstlzg1" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="https://www.cnblogs.com/alantao/"><img id="blogLogo" src="/Skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="https://www.cnblogs.com/alantao/">AlanTao</a></h1>
+<h2></h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">博客园</a></li>
+<li><a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/alantao/">首页</a></li>
+<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/AlanTao">联系</a></li>
+<li><a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/alantao/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="https://www.cnblogs.com/alantao/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<span id="stats_post_count">随笔 - 280&nbsp; </span>
+<span id="stats_article_count">文章 - 0&nbsp; </span>
+<span id="stats-comment_count">评论 - 0</span>
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+        <div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/alantao/p/5859358.html">Console命令，让js调试更简单</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">一、显示信息的命令</p>
+<div class="cnblogs_code">
+<pre>console.log("normal");           <span style="color: #008000;">//</span><span style="color: #008000;"> 用于输出普通信息</span>
+console.<span style="color: #0000ff;">info</span>("information");     <span style="color: #008000;">//</span><span style="color: #008000;"> 用于输出提示性信息</span>
+console.<span style="color: #ff0000;">error</span>("error");          <span style="color: #008000;">//</span><span style="color: #008000;"> 用于输出错误信息</span>
+console.<span style="color: #ff9900;">warn</span>("warn");            <span style="color: #008000;">//</span><span style="color: #008000;"> 用于输出警示信息</span></pre>
+</div>
+<p><img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910141032129-2030936765.png" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">二、点位符：字符(%s)、整数(%d或%i)、浮点数(%f)和对象(%o);</p>
+<div class="cnblogs_code">
+<pre>console.log("%s","string");                 <span style="color: #008000;">//</span><span style="color: #008000;">字符(%s)</span>
+console.log("%d年%d月%d日",2016,8,29);       <span style="color: #008000;">//</span><span style="color: #008000;">整数(%d或%i)</span>
+console.log("圆周率是%f",3.1415926);         <span style="color: #008000;">//</span><span style="color: #008000;">浮点数(%f)</span>
+<span style="color: #0000ff;">var</span> dog =<span style="color: #000000;"> {};
+dog.name </span>= "大毛"<span style="color: #000000;">;
+dog.color </span>= "黄色"<span style="color: #000000;">;
+dog.sex </span>= "母狗"<span style="color: #000000;">;
+console.log(</span>"%o",dog);                      <span style="color: #008000;">//</span><span style="color: #008000;">对象(%o)</span></pre>
+</div>
+<p><img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910141206551-1909725216.png" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">三、信息分组 (console.group(),console.groupEnd())</p>
+<div class="cnblogs_code">
+<pre>console.group("第一组信息"<span style="color: #000000;">);
+    console.log(</span>"第一组第一条：我的博客"<span style="color: #000000;">);
+    console.log(</span>"第一组第二条：CSDN"<span style="color: #000000;">);
+console.groupEnd();
+
+console.group(</span>"第二组信息"<span style="color: #000000;">);
+    console.log(</span>"第二组第一条：程序爱好者QQ群"<span style="color: #000000;">);
+    console.log(</span>"第二组第二条：欢迎你加入"<span style="color: #000000;">);
+console.groupEnd();</span></pre>
+</div>
+<p>&nbsp;<img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910141307207-216281946.png" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">四、将对象以树状结构展现 (console.dir()可以显示一个对象所有的属性和方法)</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">var</span> info =<span style="color: #000000;"> {
+    name : </span>"Alan"<span style="color: #000000;">,
+    age : </span>"27"<span style="color: #000000;">,
+    grilFriend : </span>"nothing"<span style="color: #000000;">,
+    getName : </span><span style="color: #0000ff;">function</span><span style="color: #000000;">(){
+        </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">this</span><span style="color: #000000;">.name;
+    }
+}
+console.dir(info);</span></pre>
+</div>
+<p><img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910141426738-396986549.png" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">五、显示某个节点的内容 (console.dirxml()用来显示网页的某个节点(node)所包含的html/xml代码)</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">var</span> node = document.getElementById("info"<span style="color: #000000;">);
+node.innerHTML </span>+= "&lt;p&gt;追加的元素显示吗&lt;/p&gt;"<span style="color: #000000;">;
+console.dirxml(node);</span></pre>
+</div>
+<p><img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910141623910-593033857.png" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">六、判断变量是否是真 (console.assert()用来判断一个表达式或变量是否为真，只有表达式为false时，才输出一条相应作息，并且抛出一个异常)</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">var</span> testObj = <span style="color: #0000ff;">false</span><span style="color: #000000;">;
+console.assert(testObj, </span>'当testObj为false时才输出！');</pre>
+</div>
+<p><img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910141732238-1708682523.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">七、计时功能 (console.time()和console.timeEnd()，用来显示代码的运行时间)</p>
+<div class="cnblogs_code">
+<pre>console.time("控制台计时器"<span style="color: #000000;">);
+</span><span style="color: #0000ff;">for</span>(<span style="color: #0000ff;">var</span> i = 0; i &lt; 10000; i++<span style="color: #000000;">){
+    </span><span style="color: #0000ff;">for</span>(<span style="color: #0000ff;">var</span> j = 0; j &lt; 10000; j++){}       
+<span style="color: #000000;">}
+console.timeEnd(</span>"控制台计时器");</pre>
+</div>
+<p><img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910141845504-32611280.png" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">八、性能分析performance profile (就是分析程序各个部分的运行时间，找出瓶颈所在，使用的方法是console.profile()和console.proileEnd();)&nbsp;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">function</span><span style="color: #000000;"> All(){
+    </span><span style="color: #008000;">//</span><span style="color: #008000;"> alert(11);</span>
+    <span style="color: #0000ff;">for</span>(<span style="color: #0000ff;">var</span> i = 0; i &lt; 10; i++<span style="color: #000000;">){
+        funcA(</span>100<span style="color: #000000;">);
+    }
+    funcB(</span>1000<span style="color: #000000;">);
+}
+</span><span style="color: #0000ff;">function</span><span style="color: #000000;"> funcA(count){
+    </span><span style="color: #0000ff;">for</span>(<span style="color: #0000ff;">var</span> i = 0; i &lt; count; i++<span style="color: #000000;">){};
+}
+</span><span style="color: #0000ff;">function</span><span style="color: #000000;"> funcB(count){
+    </span><span style="color: #0000ff;">for</span>(<span style="color: #0000ff;">var</span> i = 0; i &lt; count; i++<span style="color: #000000;">){};
+}
+console.profile(</span>"性能分析器"<span style="color: #000000;">);
+All();
+console.profileEnd();</span></pre>
+</div>
+<p>详细的信息在chrome控制台里的"profile"选项里查看</p>
+<p><img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910141958957-84051636.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">九、console.count()统计代码被执行的次数</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">function</span><span style="color: #000000;"> myFunction(){
+    console.count(</span>"myFunction 被执行的次数"<span style="color: #000000;">);
+}
+myFunction();       </span><span style="color: #008000;">//</span><span style="color: #008000;">myFunction 被执行的次数: 1</span>
+myFunction();       <span style="color: #008000;">//</span><span style="color: #008000;">myFunction 被执行的次数: 2</span>
+myFunction();       <span style="color: #008000;">//</span><span style="color: #008000;">myFunction 被执行的次数: 3</span></pre>
+</div>
+<p><img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910142250441-1981258369.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">十、keys和values，要在浏览器里输入</p>
+<p>&nbsp;<img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910142314988-1073223360.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">十一、console.table表格显示方法</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">var</span> mytable =<span style="color: #000000;"> [
+    {
+        name: </span>"Alan"<span style="color: #000000;">,
+        sex : </span>"man"<span style="color: #000000;">,
+        age : </span>"27"<span style="color: #000000;">
+    },
+    {
+        name: </span>"Wu"<span style="color: #000000;">,
+        sex : </span>"gril"<span style="color: #000000;">,
+        age : </span>"28"<span style="color: #000000;">
+    },
+    {
+        name: </span>"Tao"<span style="color: #000000;">,
+        sex : </span>"man and gril"<span style="color: #000000;">,
+        age : </span>"29"<span style="color: #000000;">
+    }
+]
+console.table(mytable);</span></pre>
+</div>
+<p><img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910142355848-1537368736.png" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">十二、Chrome 控制台中原生支持类jQuery的选择器，也就是说你可以用$加上熟悉的css选择器来选择DOM节。</p>
+<div class="cnblogs_code">
+<pre>$("body");           <span style="color: #008000;">//</span><span style="color: #008000;">选择body节点</span></pre>
+</div>
+<p><img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910142430504-1813497996.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">十三、copy通过此命令可以将在控制台获取到的内容复制到剪贴板</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">copy(document.body);                      //复制body</span><span style="color: #008000;">copy(document.getElementById("info"));    //复制某id元素的的节点</span></pre>
+</div>
+<p><img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910142507519-684399550.jpg" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">十四、$_命令返回最近一次表达式执行的结果，$0-$4代表了最近5个你选择过的DOM节点</p>
+<p>&nbsp;<img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910142644848-1329402825.gif" alt="" /></p>
+<p>&nbsp;</p>
+<p style="font-size: 22px; line-height: 160%; background: #08BBF1; color: #fff; margin-bottom: 20px; padding-left: 10px;">十五、利用控制台输出文字,图片,以%c开头，后面的文字就打印的信息，后面一个参数就是样式属性；</p>
+<div class="cnblogs_code">
+<pre>console.log("请在邮件中注明%c 来自:console","font-size:16px;color:red;font-weight:bold;");</pre>
+</div>
+<p><img src="https://images2015.cnblogs.com/blog/777145/201609/777145-20160910142724629-65894045.png" alt="" /></p>
+<p>&nbsp;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2016-09-10 14:28</span> <a href='https://www.cnblogs.com/alantao/'>AlanTao</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=5859358" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(5859358);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=false,cb_blogId=232583,cb_entryId=5859358,cb_blogApp=currentBlogApp,cb_blogUserGuid='8b315594-5b19-e511-b908-9dcfd8948a71',cb_entryCreatedDate='2016/9/10 14:28:00';loadViewCount(cb_entryId);var cb_postType=1;var isMarkdown=false;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='#' onclick='return RefreshPage();'>刷新页面</a><a href='#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<script>
+  googletag.cmd.push(function() {
+        googletag.defineSlot('/1090369/C1', [300, 250], 'div-gpt-ad-1546353474406-0').addService(googletag.pubads());
+        googletag.defineSlot('/1090369/C2', [468, 60], 'div-gpt-ad-1539008685004-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+  });
+</script>
+<div id='cnblogs_c1' class='c_ad_block'>
+    <div id='div-gpt-ad-1546353474406-0' style='height:250px; width:300px;'></div>
+</div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'>
+    <div id='div-gpt-ad-1539008685004-0' style='height:60px; width:468px;'></div>
+</div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+ if(enablePostBottom()) {
+    codeHighlight();
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverT2();
+    deliverC1();
+    deliverC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);  
+}
+</script>
+</div>
+
+    
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2019 AlanTao
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+</body>
+</html>
