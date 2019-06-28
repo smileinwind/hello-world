@@ -1,0 +1,25 @@
+var catcherr = '没关系你不是抓到了我吗\n'
+/**
+ * @returns async返回值是一个promise对象，因此可以使用then方法添加回调函数，
+ * 当函数执行的时候，一旦遇到await就会先返回，
+ * 等到异步操作完成，再接着执行函数体内后面的内容
+ */
+async function test() {
+    console.log('test start...');
+    //当一个await语句后面的promise变为reject，那么整个函数都会中断执行
+    let promise = await new Promise((resolve, reject) => {
+        console.log('Promise  start')
+        setTimeout(() => {
+            resolve('i am  not an error')
+            // console.log('throw error ')
+            // reject('i am an error')
+        }, 3000)
+    })
+    //只有等到async函数内部的异步操作执行完，才会执行then方法指定的回调函数。
+    console.log('test end')
+    return promise
+}
+
+test().then((p) => console.log("Promise resolved", p))
+    .catch(error => console.warn(catcherr, error))
+console.log(new Date().toLocaleString())
