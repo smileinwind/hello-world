@@ -23,3 +23,10 @@ async function test() {
 test().then((p) => console.log("Promise resolved", p))
     .catch(error => console.warn(catcherr, error))
 console.log(new Date().toLocaleString())
+/*
+test start...
+Promise  start
+2019-6-28 14:18:35
+test end
+Promise resolved i am  not an error
+*/
